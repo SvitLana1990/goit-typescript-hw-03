@@ -23,13 +23,13 @@ class Person {
 abstract class House {
   door: boolean = false;
   key: Key;
-  tenant: Person[] = [];
+  tenants: Person[] = [];
   constructor(key: Key) {
     this.key = key;
   }
   comeIn(person: Person) {
     if (this.door) {
-      this.tenant.push(person);
+      this.tenants.push(person);
     }
   }
   abstract openDoor(key: Key | undefined): void;
